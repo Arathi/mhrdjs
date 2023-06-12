@@ -1,0 +1,10 @@
+Inputs: in1, in2, carryIn;
+Outputs: out, carryOut;
+Parts: hadd1 HALF_ADDER, hadd2 HALF_ADDER, or OR;
+Wires:
+    in1 -> hadd1.in1, in2 -> hadd1.in2,
+    hadd1.out -> hadd2.in1, carryIn -> hadd2.in2,
+    hadd2.out -> out,
+    hadd1.carry -> or.in1, hadd2.carry -> or.in2,
+    or.out -> carryOut
+;

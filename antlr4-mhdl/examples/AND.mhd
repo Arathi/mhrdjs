@@ -1,0 +1,9 @@
+Inputs: in1, in2;
+Outputs: out;
+Parts: nand NAND, not NOT;
+Wires:
+    in1 -> nand.in1,
+    in2 -> nand.in2,
+    nand.out -> not.in,
+    not.out -> out
+;

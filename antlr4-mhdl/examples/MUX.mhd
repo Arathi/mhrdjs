@@ -1,0 +1,10 @@
+Inputs: in1, in2, sel;
+Outputs: out;
+Parts: a1 AND, a2 AND, ns NOT, or OR;
+Wires:
+    sel -> ns.in,
+    in1 -> a1.in1, ns.out -> a1.in2,
+    in2 -> a2.in1, sel -> a2.in2,
+    a1.out -> or.in1, a2.out -> or.in2,
+    or.out -> out
+;
